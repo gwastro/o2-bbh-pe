@@ -20,7 +20,7 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unite
 
 This is the first public data release of samples from the posterior probability density function for the three binary black hole mergers---GW170104, GW170608, and GW170814---detected during the second observing run of the Advanced LIGO and Virgo observatories. The analysis to generate the data is presented in the paper posted at [arxiv:1811.09232](https://arxiv.org/abs/1811.09232). We provide a notebook to demonstrate how to read the files containing the posterior samples, handle the data, tools for visualizing the data, and commands for reconstructing figures 1, 2 and 3 in the paper. We also provide the configuration files and sample scripts with command lines to replicate our analyses for the three events to generate these data.
 
-We encourage use of these data in derivative works. If you use the material provided here, please cite the companion paper using the following reference for describing the data.
+We encourage use of these data in derivative works. If you use the material provided here, please cite the companion paper for this data release using the following reference. The companion paper provides a description of the data and our analyses for generating these data.
 ```
 @article{De:2018,
       author         = "De, Soumi and Capano, Collin D. and Biwer, C. M. and Nitz, Alexander H. and Brown, Duncan A.",
@@ -33,7 +33,7 @@ We encourage use of these data in derivative works. If you use the material prov
 }
 ```
 
-Please also cite the paper [Biwer et al. (2018)](https://arxiv.org/abs/1807.10312) using the following reference for the process of generating the data in this work:
+Please also cite [Biwer et al. (2018)](https://arxiv.org/abs/1807.10312) using the following reference. This paper describes and validates the PyCBC Inference parameter estimation toolkit that was used for generating the data.
 ```
 @article{Biwer:2018,
       author         = "Biwer, C. M. and Capano, Collin D. and De, Soumi and
