@@ -33,7 +33,7 @@ We encourage use of these data in derivative works. If you use the material prov
 }
 ```
 
-Please also cite the paper [arxiv:1807.10312](https://arxiv.org/abs/1807.10312) using the following reference for the process of generating the data in this work:
+Please also cite the paper [Biwer et al. (2018)](https://arxiv.org/abs/1807.10312) using the following reference for the process of generating the data in this work:
 ```
 @article{Biwer:2018,
       author         = "Biwer, C. M. and Capano, Collin D. and De, Soumi and
