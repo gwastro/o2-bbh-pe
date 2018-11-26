@@ -18,18 +18,32 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unite
 
 ## Introduction
 
-This is the first public data release of samples from the posterior probability density function for the three binary black hole mergers---GW170104, GW170608, and GW170814---detected during the second observing run of the Advanced LIGO and Virgo observatories. The analysis to generate the data is presented in the paper posted at [arxiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX). We provide a notebook to demonstrate how to read the files containing the posterior samples, handle the data, tools for visualizing the data, and commands for reconstructing figures 1, 2 and 3 in the paper. We also provide the configuration files and sample scripts with command lines to replicate our analyses for the three events to generate these data.
+This is the first public data release of samples from the posterior probability density function for the three binary black hole mergers---GW170104, GW170608, and GW170814---detected during the second observing run of the Advanced LIGO and Virgo observatories. The analysis to generate the data is presented in the paper posted at [arxiv:1811.09232](https://arxiv.org/abs/1811.09232). We provide a notebook to demonstrate how to read the files containing the posterior samples, handle the data, tools for visualizing the data, and commands for reconstructing figures 1, 2 and 3 in the paper. We also provide the configuration files and sample scripts with command lines to replicate our analyses for the three events to generate these data.
 
-We encourage use of these data in derivative works. If you use the material provided here, please cite the paper using the reference:
+We encourage use of these data in derivative works. If you use the material provided here, please cite the companion paper using the following reference for describing the data.
 ```
 @article{De:2018,
       author         = "De, Soumi and Capano, Collin D. and Biwer, C. M. and Nitz, Alexander H. and Brown, Duncan A.",
       title          = "{Posterior samples of the parameters of black hole mergers released to date in the second Advanced LIGO--Virgo observing run}",
       year           = "2018",
-      eprint         = "XXXX.XXXXX",
+      eprint         = "1811.09232",
       archivePrefix  = "arXiv",
       primaryClass   = "astro-ph.IM",
-      SLACcitation   = "%%CITATION = ARXIV:XXXX.XXXXX;%%"
+      SLACcitation   = "%%CITATION = ARXIV:1811.09232;%%"
+}
+```
+
+Please also cite the paper [arxiv:1807.10312](https://arxiv.org/abs/1807.10312) using the following reference for the process of generating the data in this work:
+```
+@article{Biwer:2018,
+      author         = "Biwer, C. M. and Capano, Collin D. and De, Soumi and
+                        Cabero, Miriam and Brown, Duncan A. and Nitz, Alexander H. and Raymond, V.",
+      title          = "{PyCBC Inference: A Python-based parameter estimation toolkit for compact-object merger signals}",
+      year           = "2018",
+      eprint         = "1807.10312",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.IM",
+      SLACcitation   = "%%CITATION = ARXIV:1807.10312;%%"
 }
 ```
 
@@ -37,7 +51,7 @@ The parameter estimation analyses to generate the posterior samples and construc
 
 The contents in the repository are organized as follows :
 
-- ``data_release_o2_bbh_pe.ipynb`` : Notebook demonstrating tools to handle the released posteriors, visualize them, and reconstruct Figures in the paper arxiv:XXXX.XXXXX
+- ``data_release_o2_bbh_pe.ipynb`` : Notebook demonstrating tools to handle the released posteriors, visualize them, and reconstruct Figures in the paper arxiv:1811.09232
 
 - ``posteriors`` : Directory having the posterior files
     - ``GW170104`` : Directory for GW170104
@@ -74,7 +88,7 @@ The notebook server can be started inside the container with the command:
 ```sh
 jupyter notebook --ip 0.0.0.0 --no-browser
 ```
-You can then connect to the notebook server at the URL printed by ``jupyter``. Navigate to the directory `o2-bbh-pe` in the cloned git repository and open [data_release_o2_bbh_pe.ipynb](https://github.com/gwastro/pycbc-inference-paper/blob/master/o2_bbh_pe.ipynb) (this notebook).
+You can then connect to the notebook server at the URL printed by ``jupyter``. Navigate to the directory `o2-bbh-pe` in the cloned git repository and open [data_release_o2_bbh_pe.ipynb](https://github.com/gwastro/o2-bbh-pe/blob/master/data_release_o2_bbh_pe.ipynb) (this notebook).
 
 ## Acknowledgements
 This research has made use of data from the Gravitational Wave Open Science Center [https://www.gw-openscience.org](https://www.gw-openscience.org). Computations were performed in the Syracuse University SUGWG cluster.
