@@ -1,5 +1,7 @@
 # Posterior samples of the parameters of black hole mergers released to date in the second Advanced LIGO--Virgo observing run
 
+[![DOI](https://zenodo.org/badge/158248811.svg)](https://zenodo.org/badge/latestdoi/158248811)
+
 **Soumi De<sup>1</sup>, Collin D. Capano<sup>2,3</sup>, Christopher M. Biwer<sup>4</sup>, Alexander H. Nitz<sup>2,3</sup>, Duncan A. Brown<sup>1</sup>**
 
 **<sup>1</sup>Department of Physics, Syracuse University, Syracuse, NY 13244, USA**
