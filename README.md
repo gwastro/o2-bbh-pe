@@ -33,7 +33,7 @@ We encourage use of these data in derivative works. If you use the material prov
 }
 ```
 
-Please also cite [Biwer et al. (2018)](https://arxiv.org/abs/1807.10312) using the following reference. This paper describes and validates the PyCBC Inference parameter estimation toolkit that was used for generating the data.
+Please also cite [Biwer et al. (2018)](https://iopscience.iop.org/article/10.1088/1538-3873/aaef0b) using the following reference. This paper describes and validates the PyCBC Inference parameter estimation toolkit that was used for generating the data.
 ```
 @article{Biwer_2019,
 	doi = {10.1088/1538-3873/aaef0b},
