@@ -57,19 +57,19 @@ The contents in the repository are organized as follows :
 
 - ``posteriors`` : Directory having the posterior files
     - ``GW170104`` : Directory for GW170104
-        - [gw170104_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170104/gw170104_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170104.
+        - [gw170104_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170104/gw170104_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170104. Also contains prior samples and PSDs used in the analysis.
     - ``GW170608`` : Directory for GW170608
-        - [gw170608_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170608/gw170608_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170608.
+        - [gw170608_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170608/gw170608_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170608. Also contains prior samples and PSDs used in the analysis.
     - ``GW170729`` : Directory for GW170729
-        - [gw170729_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170729/gw170729_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170729.
+        - [gw170729_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170729/gw170729_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170729. Also contains prior samples and PSDs used in the analysis.
     - ``GW170809`` : Directory for GW170809
-        - [gw170809_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170809/gw170809_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170809.
+        - [gw170809_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170809/gw170809_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170809. Also contains prior samples and PSDs used in the analysis.
     - ``GW170814`` : Directory for GW170814
-        - [gw170814_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170814/gw170814_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170814.
+        - [gw170814_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170814/gw170814_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170814. Also contains prior samples and PSDs used in the analysis.
     - ``GW170818`` : Directory for GW170818
-        - [gw170818_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170818/gw170818_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170818.
+        - [gw170818_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170818/gw170818_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170818. Also contains prior samples and PSDs used in the analysis.
     - ``GW170823`` : Directory for GW170823
-        - [gw170823_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170823/gw170823_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170823.
+        - [gw170823_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170823/gw170823_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170823. Also contains prior samples and PSDs used in the analysis.
 
 - ``run_files`` : Directory having run scripts and configuration files to replicate the analyses
     - ``GW170104`` : Directory for GW170104
