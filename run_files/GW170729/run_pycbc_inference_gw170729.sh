@@ -1,20 +1,21 @@
 #! /bin/bash -v
 
 # The frame files can be downloaded from the Gravitational Wave Open Science Center (GWOSC) with the following commands
-#wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170104/H-H1_GWOSC_16KHZ_R1-1167557889-4096.gwf
-#wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170104/L-L1_GWOSC_16KHZ_R1-1167557889-4096.gwf
+# wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170729/H-H1_GWOSC_16KHZ_R1-1185387760-4096.gwf
+# wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170729/L-L1_GWOSC_16KHZ_R1-1185387760-4096.gwf
+# wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170729/V-V1_GWOSC_16KHZ_R1-1185387760-4096.gwf
 
 # pycbc_inference can also be run on multiple machines using MPI for which add --use-mpi to the command line below
 
-pycbc_config_file=gw170104_inference.ini
-pycbc_output_file=gw170104_posteriors.hdf
+pycbc_config_file=gw170729_inference.ini
+pycbc_output_file=gw170729_posteriors.hdf
 
 # data
-FRAMES="H1:H-H1_GWOSC_16KHZ_R1-1167557889-4096.gwf L1:L-L1_GWOSC_16KHZ_R1-1167557889-4096.gwf"
-CHANNELS="H1:GWOSC-16KHZ_R1_STRAIN L1:GWOSC-16KHZ_R1_STRAIN"
+FRAMES="H1:H-H1_GWOSC_16KHZ_R1-1185387760-4096.gwf L1:L-L1_GWOSC_16KHZ_R1-1185387760-4096.gwf V1:V-V1_GWOSC_16KHZ_R1-1185387760-4096.gwf"
+CHANNELS="H1:GWOSC-16KHZ_R1_STRAIN L1:GWOSC-16KHZ_R1_STRAIN V1:GWOSC-16KHZ_R1_STRAIN"
 
 # trigger parameters
-TRIGGER_TIME=1167559936.6
+TRIGGER_TIME=1185389807.3
 
 # data to use
 # the longest waveform covered by the prior must fit in these times
@@ -28,12 +29,12 @@ PAD_DATA=8
 TRIGGER_TIME_INT=${TRIGGER_TIME%.*}
 
 # PSD estimation options
-PSD_ESTIMATION="H1:median L1:median"
+PSD_ESTIMATION="H1:median L1:median V1:median"
 PSD_INVLEN=4
 PSD_SEG_LEN=8
 PSD_STRIDE=4
 PSD_DATA_LEN=1024
-PSD_GATE="H1:1167559936.0:2.0:0.5 L1:1167559936.0:2.0:0.5"
+PSD_GATE="H1:1185389807.0:2.0:0.5 L1:1185389807.0:2.0:0.5 V1:1185389807.0:2.0:0.5"
 
 # start and end time of data to read in
 GPS_START_TIME=$((${TRIGGER_TIME_INT} - ${SEARCH_BEFORE} - ${PSD_INVLEN}))
@@ -42,14 +43,14 @@ echo $GPS_START_TIME
 echo $GPS_END_TIME
 
 # start and end time of data to read in for PSD estimation
-PSD_START_TIME=$((${TRIGGER_TIME_INT} - ${PSD_DATA_LEN}/2))
-PSD_END_TIME=$((${TRIGGER_TIME_INT} + ${PSD_DATA_LEN}/2))
+PSD_END_TIME=1185389960
+PSD_START_TIME=$((${PSD_END_TIME} - ${PSD_DATA_LEN}))
 echo ${PSD_START_TIME}
 echo ${PSD_END_TIME}
 
 
 # sampler parameters
-IFOS="H1 L1"
+IFOS="H1 L1 V1"
 SAMPLE_RATE=2048
 F_HIGHPASS=15
 F_MIN=20
@@ -65,7 +66,7 @@ N_PROCS=190
 
 SEED=12
 
-OMP_NUM_THREADS=1
+export OMP_NUM_THREADS=1
 pycbc_inference --verbose \
     --seed ${SEED} \
     --instruments ${IFOS} \

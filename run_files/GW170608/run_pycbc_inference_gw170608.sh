@@ -1,17 +1,17 @@
 #! /bin/bash -v
 
-# The frame files can be downloaded from the LIGO Open Science Center (LOSC) with the following commands
-#wget https://gw-openscience.org/GW170608data/H-H1_LOSC_CLN_16_V1-1180922238-512.gwf
-#wget https://gw-openscience.org/GW170608data/L-L1_LOSC_CLN_16_V1-1180922238-512.gwf
+# The frame files can be downloaded from the Gravitational Wave Open Science Center (GWOSC) with the following commands
+#wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170608/H-H1_GWOSC_16KHZ_R1-1180920447-4096.gwf
+#wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170608/L-L1_GWOSC_16KHZ_R1-1180920447-4096.gwf
 
-# This can also be run on multiple machines using MPI for which add --use-mpi to the command line below
+# pycbc_inference can also be run on multiple machines using MPI for which add --use-mpi to the command line below
 
 pycbc_config_file=gw170608_inference.ini
 pycbc_output_file=gw170608_posteriors.hdf
 
 # data
-FRAMES="H1:H-H1_LOSC_CLN_16_V1-1180922238-512.gwf L1:L-L1_LOSC_CLN_16_V1-1180922238-512.gwf"
-CHANNELS="H1:LOSC-STRAIN L1:LOSC-STRAIN"
+FRAMES="H1:H-H1_GWOSC_16KHZ_R1-1180920447-4096.gwf L1:L-L1_GWOSC_16KHZ_R1-1180920447-4096.gwf"
+CHANNELS="H1:GWOSC-16KHZ_R1_STRAIN L1:GWOSC-16KHZ_R1_STRAIN"
 
 # trigger parameters
 TRIGGER_TIME=1180922494.49
@@ -32,8 +32,8 @@ PSD_ESTIMATION="H1:median L1:median"
 PSD_INVLEN=4
 PSD_SEG_LEN=8
 PSD_STRIDE=4
-PSD_DATA_LEN=480  # The data files are 512 s long. So I leave 8s from the beginning and the end of the frame files plus 8 s on each side for pad-data. 
-PSD_GATE="H1:1180922494.0:2.0:0.5 L1:1180922494.0:2.0:0.5"
+PSD_DATA_LEN=1024  # The data files are 512 s long. So I leave 8s from the beginning and the end of the frame files plus 8 s on each side for pad-data. 
+PSD_GATE="H1:1180922489.0:7.0:0.5 L1:1180922489.0:7.0:0.5"
 
 # start and end time of data to read in
 GPS_START_TIME=$((${TRIGGER_TIME_INT} - ${SEARCH_BEFORE} - ${PSD_INVLEN}))
@@ -67,7 +67,6 @@ SEED=12
 
 export OMP_NUM_THREADS=1
 pycbc_inference --verbose \
-    --use-mpi \
     --seed ${SEED} \
     --instruments ${IFOS} \
     --gps-start-time ${GPS_START_TIME} \

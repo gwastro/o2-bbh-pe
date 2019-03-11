@@ -1,4 +1,4 @@
-# Posterior samples of the parameters of binary black hole mergers GW170104, GW170608, and GW170814
+# Posterior samples of the parameters of binary black hole mergers in the second Advanced LIGO--Virgo observing run
 
 **Soumi De<sup>1</sup>, Collin D. Capano<sup>2,3</sup>, Christopher M. Biwer<sup>4</sup>, Alexander H. Nitz<sup>2,3</sup>, Duncan A. Brown<sup>1</sup>**
 
@@ -6,7 +6,7 @@
 
 **<sup>2</sup>Albert-Einstein-Institut, Max-Planck-Institut for Gravitationsphysik, D-30167 Hannover, Germany**
 
-**<sup>3</sup>Leibniz Universit{\"a}t Hannover, D-30167, Hannover, Germany**
+**<sup>3</sup>Leibniz Universitat Hannover, D-30167, Hannover, Germany**
 
 **<sup>4</sup>Los Alamos National Laboratory, Los Alamos, NM 87545, USA**
 
@@ -18,13 +18,13 @@ This work is licensed under a [https://creativecommons.org/licenses/by/4.0/deed.
 
 ## Introduction
 
-This is the first public data release of samples from the posterior probability density function for the three binary black hole mergers---GW170104, GW170608, and GW170814---detected during the second observing run of the Advanced LIGO and Virgo observatories. The analysis to generate the data is presented in the paper posted at [arxiv:1811.09232](https://arxiv.org/abs/1811.09232). We provide a notebook to demonstrate how to read the files containing the posterior samples, handle the data, tools for visualizing the data, and commands for reconstructing figures 1, 2 and 3 in the paper. We also provide the configuration files and sample scripts with command lines to replicate our analyses for the three events to generate these data.
+This is a public data release of posterior samples from the parameter estimation analysis of the seven binary black hole mergers---GW170104, GW170608, GW170729, GW170809, GW170814, GW170818, and GW170823---detected during the second observing run of the Advanced LIGO and Virgo observatories using the gravitational-wave open data. The analysis to generate the data is presented in the paper posted at [arxiv:1811.09232](https://arxiv.org/abs/1811.09232). We provide a notebook to demonstrate how to read the files containing the posterior samples, handle the data, tools for visualizing the data, and commands for reconstructing figures 1, 2 and 3 in the paper. We also provide the configuration files and sample scripts with command lines to replicate our analyses for the three events to generate these data.
 
 We encourage use of these data in derivative works. If you use the material provided here, please cite the companion paper for this data release using the following reference. The companion paper provides a description of the data and our analyses for generating these data.
 ```
 @article{De:2018,
       author         = "De, Soumi and Capano, Collin D. and Biwer, C. M. and Nitz, Alexander H. and Brown, Duncan A.",
-      title          = "{Posterior samples of the parameters of black hole mergers released to date in the second Advanced LIGO--Virgo observing run}",
+      title          = "{Posterior samples of the parameters of black hole mergers in the second Advanced LIGO--Virgo observing run}",
       year           = "2018",
       eprint         = "1811.09232",
       archivePrefix  = "arXiv",
@@ -35,15 +35,17 @@ We encourage use of these data in derivative works. If you use the material prov
 
 Please also cite [Biwer et al. (2018)](https://arxiv.org/abs/1807.10312) using the following reference. This paper describes and validates the PyCBC Inference parameter estimation toolkit that was used for generating the data.
 ```
-@article{Biwer:2018,
-      author         = "Biwer, C. M. and Capano, Collin D. and De, Soumi and
-                        Cabero, Miriam and Brown, Duncan A. and Nitz, Alexander H. and Raymond, V.",
-      title          = "{PyCBC Inference: A Python-based parameter estimation toolkit for compact-object merger signals}",
-      year           = "2018",
-      eprint         = "1807.10312",
-      archivePrefix  = "arXiv",
-      primaryClass   = "astro-ph.IM",
-      SLACcitation   = "%%CITATION = ARXIV:1807.10312;%%"
+@article{Biwer_2019,
+	doi = {10.1088/1538-3873/aaef0b},
+	year = 2019,
+	month = {jan},
+	publisher = {{IOP} Publishing},
+	volume = {131},
+	number = {996},
+	pages = {024503},
+	author = {C. M. Biwer and Collin D. Capano and Soumi De and Miriam Cabero and Duncan A. Brown and Alexander H. Nitz and V. Raymond},
+	title = {{PyCBC} Inference: A Python-based Parameter Estimation Toolkit for Compact Binary Coalescence Signals},
+	journal = {Publications of the Astronomical Society of the Pacific},
 }
 ```
 
@@ -58,8 +60,16 @@ The contents in the repository are organized as follows :
         - [gw170104_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170104/gw170104_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170104.
     - ``GW170608`` : Directory for GW170608
         - [gw170608_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170608/gw170608_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170608.
+    - ``GW170729`` : Directory for GW170729
+        - [gw170729_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170729/gw170729_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170729.
+    - ``GW170809`` : Directory for GW170809
+        - [gw170809_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170809/gw170809_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170809.
     - ``GW170814`` : Directory for GW170814
         - [gw170814_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170814/gw170814_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170814.
+    - ``GW170818`` : Directory for GW170818
+        - [gw170818_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170818/gw170818_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170818.
+    - ``GW170823`` : Directory for GW170823
+        - [gw170823_posteriors_thinned.hdf](https://github.com/gwastro/o2-bbh-pe/blob/master/posteriors/GW170823/gw170823_posteriors_thinned.hdf) : File containing posterior samples from the MCMC for measuring properties of GW170823.
 
 - ``run_files`` : Directory having run scripts and configuration files to replicate the analyses
     - ``GW170104`` : Directory for GW170104
@@ -68,11 +78,23 @@ The contents in the repository are organized as follows :
     - ``GW170608`` : Directory for GW170608
         - ``gw170608_inference.ini`` : Configuration file for GW170608 analysis
         - ``run_pycbc_inference_gw170608.sh`` : Run script for GW170608 analysis
+    - ``GW170729`` : Directory for GW170729
+        - ``gw170729_inference.ini`` : Configuration file for GW170729 analysis
+        - ``run_pycbc_inference_gw170729.sh`` : Run script for GW170729 analysis
+    - ``GW170809`` : Directory for GW170809
+        - ``gw170809_inference.ini`` : Configuration file for GW170809 analysis
+        - ``run_pycbc_inference_gw170809.sh`` : Run script for GW170809 analysis
     - ``GW170814`` : Directory for GW170814 :
         - ``gw170814_inference.ini`` : Configuration file for GW170814 analysis
         - ``run_pycbc_inference_gw170814.sh`` : Run script for GW170814 analysis
+    - ``GW170818`` : Directory for GW170818
+        - ``gw170818_inference.ini`` : Configuration file for GW170818 analysis
+        - ``run_pycbc_inference_gw170818.sh`` : Run script for GW170818 analysis
+    - ``GW170823`` : Directory for GW170823
+        - ``gw170823_inference.ini`` : Configuration file for GW170823 analysis
+        - ``run_pycbc_inference_gw170823.sh`` : Run script for GW170823 analysis
     - ``run_pycbc_inference_extract_samples.sh`` : Contains command for extracting independent samples from the full chains obtained from the MCMC runs.
-
+        
 ## Running the notebook in a Docker container
 
 This notebook can be run from a PyCBC Docker container, or a machine with PyCBC installed. Instructions for [downloading the docker container](http://gwastro.github.io/pycbc/latest/html/docker.html) are available from the [PyCBC home page.](https://pycbc.org/) To start a container with instance of Jupyter notebook, run the commands

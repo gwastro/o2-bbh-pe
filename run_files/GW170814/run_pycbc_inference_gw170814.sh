@@ -1,16 +1,19 @@
 #! /bin/bash -v
 
-# The frame files can be downloaded from the LIGO Open Science Center (LOSC) with the following commands
-#wget https://gw-openscience.org/GW170814data/H-H1_LOSC_CLN_16_V1-1186740069-3584.gwf
-#wget https://gw-openscience.org/GW170814data/L-L1_LOSC_CLN_16_V1-1186740069-3584.gwf
-#wget https://gw-openscience.org/GW170814data/V-V1_LOSC_CLN_16_V1-1186739813-4096.gwf
+# The frame files can be downloaded from the Gravitational Wave Open Science Center (GWOSC) with the following commands
+
+# wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170814/H-H1_GWOSC_16KHZ_R1-1186739814-4096.gwf
+# wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170814/L-L1_GWOSC_16KHZ_R1-1186739814-4096.gwf
+# wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170814/V-V1_GWOSC_16KHZ_R1-1186739814-4096.gwf
+
+# pycbc_inference can also be run on multiple machines using MPI for which add --use-mpi to the command line below
 
 pycbc_config_file=gw170814_inference.ini
 pycbc_output_file=gw170814_posteriors.hdf
 
 # data
-FRAMES="H1:H-H1_LOSC_CLN_16_V1-1186740069-3584.gwf L1:L-L1_LOSC_CLN_16_V1-1186740069-3584.gwf V1:V-V1_LOSC_CLN_16_V1-1186739813-4096.gwf"
-CHANNELS="H1:LOSC-STRAIN L1:LOSC-STRAIN V1:LOSC-STRAIN"
+FRAMES="H1:H-H1_GWOSC_16KHZ_R1-1186739814-4096.gwf L1:L-L1_GWOSC_16KHZ_R1-1186739814-4096.gwf V1:V-V1_GWOSC_16KHZ_R1-1186739814-4096.gwf"
+CHANNELS="H1:GWOSC-16KHZ_R1_STRAIN L1:GWOSC-16KHZ_R1_STRAIN V1:GWOSC-16KHZ_R1_STRAIN"
 
 # trigger parameters
 TRIGGER_TIME=1186741861.53

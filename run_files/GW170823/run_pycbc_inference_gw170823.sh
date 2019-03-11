@@ -1,20 +1,20 @@
 #! /bin/bash -v
 
-# The frame files can be downloaded from the Gravitational Wave Open Science Center (GWOSC) with the following commands
-#wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170104/H-H1_GWOSC_16KHZ_R1-1167557889-4096.gwf
-#wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170104/L-L1_GWOSC_16KHZ_R1-1167557889-4096.gwf
+# The frame files can be downloaded from the Gravitational-Wave Open Science Center (GWOSC) with the following commands
+# wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170823/H-H1_GWOSC_16KHZ_R1-1187527209-4096.gwf
+# wget https://www.gw-openscience.org/catalog/GWTC-1-confident/data/GW170823/L-L1_GWOSC_16KHZ_R1-1187527209-4096.gwf
 
 # pycbc_inference can also be run on multiple machines using MPI for which add --use-mpi to the command line below
 
-pycbc_config_file=gw170104_inference.ini
-pycbc_output_file=gw170104_posteriors.hdf
+pycbc_config_file=gw170823_inference.ini
+pycbc_output_file=gw170823_posteriors.hdf
 
 # data
-FRAMES="H1:H-H1_GWOSC_16KHZ_R1-1167557889-4096.gwf L1:L-L1_GWOSC_16KHZ_R1-1167557889-4096.gwf"
+FRAMES="H1:H-H1_GWOSC_16KHZ_R1-1187527209-4096.gwf L1:L-L1_GWOSC_16KHZ_R1-1187527209-4096.gwf"
 CHANNELS="H1:GWOSC-16KHZ_R1_STRAIN L1:GWOSC-16KHZ_R1_STRAIN"
 
 # trigger parameters
-TRIGGER_TIME=1167559936.6
+TRIGGER_TIME=1187529256.5
 
 # data to use
 # the longest waveform covered by the prior must fit in these times
@@ -33,7 +33,7 @@ PSD_INVLEN=4
 PSD_SEG_LEN=8
 PSD_STRIDE=4
 PSD_DATA_LEN=1024
-PSD_GATE="H1:1167559936.0:2.0:0.5 L1:1167559936.0:2.0:0.5"
+PSD_GATE="H1:1187529256.0:2.0:0.5 L1:1187529256.0:2.0:0.5"
 
 # start and end time of data to read in
 GPS_START_TIME=$((${TRIGGER_TIME_INT} - ${SEARCH_BEFORE} - ${PSD_INVLEN}))
@@ -65,7 +65,7 @@ N_PROCS=190
 
 SEED=12
 
-OMP_NUM_THREADS=1
+export OMP_NUM_THREADS=1
 pycbc_inference --verbose \
     --seed ${SEED} \
     --instruments ${IFOS} \
