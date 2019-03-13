@@ -1,14 +1,14 @@
-# Posterior samples of the parameters of binary black hole mergers in the second Advanced LIGO--Virgo observing run
+# Posterior samples of the parameters of binary black holes from Advanced LIGO--Virgo's second observing run
 
-**Soumi De<sup>1</sup>, Collin D. Capano<sup>2,3</sup>, Christopher M. Biwer<sup>4</sup>, Alexander H. Nitz<sup>2,3</sup>, Duncan A. Brown<sup>1</sup>**
+**Soumi De<sup>1</sup>, Christopher M. Biwer<sup>2</sup>, Collin D. Capano<sup>3,4</sup>, Alexander H. Nitz<sup>3,4</sup>, Duncan A. Brown<sup>1</sup>**
 
 **<sup>1</sup>Department of Physics, Syracuse University, Syracuse, NY 13244, USA**
 
-**<sup>2</sup>Albert-Einstein-Institut, Max-Planck-Institut for Gravitationsphysik, D-30167 Hannover, Germany**
+**<sup>2</sup>Los Alamos National Laboratory, Los Alamos, NM 87545, USA**
 
-**<sup>3</sup>Leibniz Universitat Hannover, D-30167, Hannover, Germany**
+**<sup>3</sup>Albert-Einstein-Institut, Max-Planck-Institut for Gravitationsphysik, D-30167 Hannover, Germany**
 
-**<sup>4</sup>Los Alamos National Laboratory, Los Alamos, NM 87545, USA**
+**<sup>4</sup>Leibniz Universitat Hannover, D-30167, Hannover, Germany**
 
 ## License
 
@@ -117,4 +117,5 @@ This research has made use of data from the Gravitational Wave Open Science Cent
 
 **Funding:** This work was supported by NSF awards PHY-1707954 (DAB, SD), and PHY-1607169 (SD). SD was also supported by the Inaugural Kathy '73 and Stan '72 Walters Endowed Fund for Science Research Graduate Fellowship at Syracuse University. Computations were supported by Syracuse University and NSF award OAC-1541396.
 
-**Authors' contributions:** Conceptualization: DAB, Methodology: SD, CMB, CDC, AHN; Software: CMB, CDC, SD, AHN, DAB; Validation: CDC, CMB, AHN; Formal Analysis: SD; Investigation: SD, CMB, CDC, AHN; Resources: DAB; Data Curation: DAB, CDC, CMB, AHN and SD; Writing: SD, CMB, CDC, DAB, and AHN; Visualization: SD, CMB, CDC, AHN; Supervision: DAB; Project Administration: DAB; Funding Acquisition: DAB.
+## Authors' contributions
+Conceptualization: DAB, Methodology: SD, CMB, CDC, AHN; Software: CMB, CDC, SD, AHN, DAB; Validation: CDC, CMB, AHN; Formal Analysis: SD; Investigation: SD, CMB, CDC, AHN; Resources: DAB; Data Curation: DAB, CDC, CMB, AHN and SD; Writing: SD, CMB, CDC, DAB, and AHN; Visualization: SD, CMB, CDC, AHN; Supervision: DAB; Project Administration: DAB; Funding Acquisition: DAB.
