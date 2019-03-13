@@ -23,7 +23,7 @@ This is a public data release of posterior samples from the parameter estimation
 We encourage use of these data in derivative works. If you use the material provided here, please cite the companion paper for this data release using the following reference. The companion paper provides a description of the data and our analyses for generating these data.
 ```
 @article{De:2018,
-      author         = "De, Soumi and Capano, Collin D. and Biwer, C. M. and Nitz, Alexander H. and Brown, Duncan A.",
+      author         = "De, Soumi and Biwer, C. M. and Capano, Collin D. and Nitz, Alexander H. and Brown, Duncan A.",
       title          = "{Posterior samples of the parameters of black hole mergers in the second Advanced LIGO--Virgo observing run}",
       year           = "2018",
       eprint         = "1811.09232",
