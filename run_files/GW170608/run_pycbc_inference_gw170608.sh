@@ -32,7 +32,7 @@ PSD_ESTIMATION="H1:median L1:median"
 PSD_INVLEN=4
 PSD_SEG_LEN=8
 PSD_STRIDE=4
-PSD_DATA_LEN=1024  # The data files are 512 s long. So I leave 8s from the beginning and the end of the frame files plus 8 s on each side for pad-data. 
+PSD_DATA_LEN=1024 
 PSD_GATE="H1:1180922489.0:7.0:0.5 L1:1180922489.0:7.0:0.5"
 
 # start and end time of data to read in
